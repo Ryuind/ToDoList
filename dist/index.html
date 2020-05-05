@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>To Do</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+      </head>
+      <body>
+        <button data-open-target class="startEverythingButton" >Create New Project</button>
+    
+    
+        <div class="projectFormContainer">
+          <p id="projectNameText">Project Name:</p>
+          <input type="text" class="inputProjectName" placeholder="Enter Project Name" maxlength = "20">
+          <p id="projectNameDescription">Project Description:</p>
+          <textarea type="text" class="inputProjectDescript" placeholder="Enter Project description" maxlength = "120" cols="40" rows="5" style="resize: none;"></textarea>
+          <button type="button" class="projectButton">Create Project!!</button>
+          <button data-project-close id="projectFormCancelButton">Cancel</button>
+        </div>
+    
+        <div class="projectLabel">
+          <p>Your Projects</p>
+        </div>
+    
+        <div id="projectContainer">
+    
+        </div>
+    
+        <div class="projectTaskContainer">
+          <p id="taskNameText">Task Name:</p>
+          <input type="text" class="inputTaskName" placeholder="Enter Task Name" maxlength = "40">
+          <p id="priorityText">Priority:</p>
+          <input type="radio" id="low" name="priority" value="low">
+          <label for="low">Low</label><br>
+          <input type="radio" id="medium" name="priority" value="medium">
+          <label for="medium">Medium</label><br>
+          <input type="radio" id="high" name="priority" value="high">
+          <label for="high">High</label>
+          <p id="dueDateText">Due Date:</p>
+          <input class="dueDate" type="date">
+          <p id="taskNameDescription">Notes:</p>
+          <textarea type="text" class="inputTaskDescript" placeholder="Enter Task description" maxlength = "200" cols="40" rows="5" style="resize: none;"></textarea>
+          <button data-create-task type="button" class="taskButton">Create Task!!</button>
+          <button data-close-task id="cancelTaskButton">Cancel</button>
+        </div>
+    
+        
+        <div class="projectPage">
+    
+        </div>
+        
+    
+    
+    
+    
+    
+        <div  class="overlay"></div>
+        <script src="main.js"></script>
+    </body>
+</html>
