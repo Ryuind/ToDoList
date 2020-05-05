@@ -1,0 +1,476 @@
+body{
+    position: relative;
+    background-color: beige;
+}
+
+.startEverythingButton {
+    position: relative;
+    margin: 20px 0px 0px 570px;
+    color: rgb(133, 231, 236);
+    width: 240px;
+    height: 100px;
+    background: transparent;
+    border: 8px dotted rgb(194,236,238);
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#deleteTextPara {
+    font-size: 90px;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.projectLabel {
+    margin: 20px 0px 0px 0px;
+    height: 80px;
+    width: 600px;
+    font-size: 50px;
+    text-align: center;
+    border-bottom: 4px dotted rgb(194,236,238);
+    background: rgb(249,238,183);
+    background: linear-gradient(180deg, rgba(249,238,183,0.3211659663865546) 0%, rgba(194,236,238,0.30155812324929976) 100%);
+}
+
+
+.projectFormContainer {
+    border: 1px solid black;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    height: 600px;
+    width: 400px;
+    max-width: 80%;
+    background-color: rgb(204, 204, 178);
+    z-index: 10;
+    text-align: center;
+}
+
+.projectFormContainer.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.projectTaskContainer {
+    border: 1px solid black;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    height: 800px;
+    width: 500px;
+    max-width: 80%;
+    background-color: rgb(204, 204, 178);
+    z-index: 10;
+    text-align: center;
+}
+
+.projectTaskContainer label {
+    font-size: 20px;
+}
+#taskNameText{
+    font-size: 20px;
+}
+.inputTaskName {
+    width: 200px;
+    height: 30px;
+    padding: 0px 0px 0px 10px;
+    border: 7px double rgb(190, 230, 235);
+    border-radius: 23px;
+}
+
+#priorityText{
+    font-size: 20px;
+}
+
+#low {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(133, 231, 236);
+}
+#medium {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(133, 231, 236);
+}
+#high{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(133, 231, 236);
+}
+#dueDateText {
+    font-size: 20px;
+}
+
+.dueDate{
+    width: 200px;
+    height: 30px;
+    padding: 0px 0px 0px 10px;
+    border: 7px double rgb(190, 230, 235);
+    border-radius: 23px;
+}
+#taskNameDescription{
+    font-size: 20px;
+}
+.inputTaskDescript{
+    width: 300px;
+    height: 100px;
+    border: 7px double rgb(190, 230, 235);
+    border-radius: 23px;
+    padding: 10px;
+    
+}
+.taskButton{
+    margin: 20px 0px 20px 0px;
+    border: 7px double rgb(190, 230, 235);
+    border-radius: 23px;
+    height: 75px;
+    width: 225px;
+    font-size: 25px;
+
+}
+#cancelTaskButton{ 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px 20px 20px 0px;
+    border: 7px double rgb(99,22,22);
+    border-radius: 23px;
+    height: 50px;
+    width: 150px;
+
+}
+
+
+
+.projectTaskContainer.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+.overlay.active { 
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+#projectContainer{
+    margin: 50px 0px 0px 0px;
+    position: absolute;
+    
+    height: auto;
+    width: 600px;
+}
+
+#projectNameText {
+    font-size: 20px;
+}
+.inputProjectName {
+    width: 200px;
+    height: 30px;
+    padding: 0px 0px 0px 10px;
+    border: 7px double rgb(190, 230, 235);
+    border-radius: 23px;
+}
+
+#projectNameDescription {
+    font-size: 20px;
+    
+}
+
+.inputProjectDescript {
+    width: 300px;
+    height: 100px;
+    border: 7px double rgb(190, 230, 235);
+    border-radius: 23px;
+    padding: 10px;
+    
+}
+
+.projectButton {
+    margin: 20px 0px 20px 0px;
+    border: 7px double rgb(190, 230, 235);
+    border-radius: 23px;
+    height: 75px;
+    width: 225px;
+    font-size: 25px;
+}
+
+#projectFormCancelButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px 20px 20px 0px;
+    border: 7px double rgb(99,22,22);
+    border-radius: 23px;
+    height: 50px;
+    width: 150px;
+}
+
+.projectCreateDiv {
+    margin: 0px 0px 20px 0px ;
+    position: relative;
+    border: none;   
+    border-radius: 50px;
+    width: 600px;
+    background-color: rgb(218,187,159);
+    padding: 1px 0px 0px 0px;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.projectCreateDiv:hover, .projectCreateDiv:focus {
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    position:relative;
+    margin: 0px 0px 0px 20px;
+    transform: scale(1.05);
+    z-index:5;
+    min-height: 220px;
+}
+
+#divCover{
+    margin: 0px 0px 20px 0px ;
+    position: absolute;
+    top: 0;
+    border: none;   
+    border-radius: 50px;
+    height: 70px;
+    width: 600px;
+    background-color: rgba(29, 22, 16, 0);
+    padding: 1px 0px 0px 0px;
+    word-wrap: break-word;
+    word-break: normal;
+    
+}
+
+.projectCreateDiv:hover #divCover {
+    position:absolute;
+    height: 220px;
+    width: 600px;
+    background-color: rgba(29, 22, 16, 0.1);
+}
+
+
+#projectDivName {
+    
+    text-align: center;
+    margin: 15px 0px 0px 20px;
+    font-size: 30px;
+
+}
+
+#projectDivDescription {
+    font-size: 0px;
+}
+.projectCreateDiv:hover #projectDivDescription {
+    font-size: 20px;
+    text-align: center;
+    margin: 15px 0px 0px 20px;
+}
+
+#deleteProjectButton {
+    visibility: hidden;
+    
+}
+
+.projectCreateDiv:hover #deleteProjectButton {
+    visibility: visible;
+    position: absolute;
+    font-size: 0px;
+    height: 50px;
+    width: 50px;  
+    margin: 20px 20px 20px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(99,22,22);
+    bottom: 0;
+}
+
+.projectCreateDiv:hover #deleteProjectButton:hover {
+    color: cornsilk;
+    font-size: 20px;
+    height: 50px;
+    width: 150px;
+}
+
+#projectDivShow{
+    visibility: hidden;
+}
+
+.projectCreateDiv:hover #projectDivShow{
+    visibility: visible;
+    font-size: 0px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px 20px 20px 20px;
+    height: 50px;
+    width: 50px;  
+    border: none;
+    border-radius: 50px;
+    background-color: beige;
+    
+}
+
+.projectCreateDiv:hover #projectDivShow:hover{
+    color: rgb(218,187,159);
+    font-size: 20px;
+    font-weight: bolder;
+    height: 50px;
+    width: 150px;
+    visibility: visible;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px 20px 20px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: beige;
+    
+}
+
+
+#showContainer {
+    height: 500px;
+    width: 500px;
+    background-color: rgb(226, 220, 220);
+    font-size: 3rem;
+}
+
+
+.projectPage{
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 800px;
+    width: 610px;
+    height: auto;
+    background-color: beige;
+    
+}
+
+.aboveTask {
+    text-align: center;
+    border-bottom: 4px dotted rgb(194,236,238);
+    border-radius: 4%;
+    background: rgb(249,238,183);
+    background: linear-gradient(180deg, rgba(249,238,183,0.1) 0%, rgba(194,236,238,0.4) 100%);
+}
+
+#openTaskFormButtonID {
+    color: rgb(51, 48, 38);
+    font-weight: bolder;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 60px;
+    width: 80px;
+    margin: 10px 10px 10px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(194,236,238, 0.5);
+    
+
+}
+
+.projectNameID {
+    margin: 10px 10px 10px 10px;
+    font-size: 40px;
+}
+
+.projectDescriptionClassName {
+    word-wrap: break-word;
+    word-break: normal;
+    margin: 10px 10px 10px 10px;
+    font-size: 20px;
+}
+
+.taskDiv {
+    
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+}
+
+.stickyNote {
+    border-radius: 4%;
+    position: relative;
+    margin: 10px 10px 10px 10px;
+    height: 180px;
+    width: 180px;
+    padding: 5px 5px 5px 5px;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transform:rotate(-6deg);
+    
+    
+}
+
+.stickyNote:hover, .stickyNote:focus {
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    transform: scale(1.25);
+    position:relative;
+    z-index:5;
+}
+
+#stickyNoteTitleID {
+    font-weight: bold;
+    font-size: 24px;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+#stickyNoteDescriptionID {
+    font-size: 0px;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.stickyNote:hover #stickyNoteTitleID {
+    font-size: 0px;
+}
+
+.stickyNote:hover #stickyNoteDescriptionID {
+    font-size: 12px;
+}
+
+
+
+#deleteTaskButtonID {
+    height: 10px;
+    width: 10px;
+    font-size: .01px;
+    background-color: rgb(99,22,22);
+    border: none;
+    border-radius: 5%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 10px 10px 10px 10px;
+
+}
+
+#deleteTaskButtonID:hover {
+    color: cornsilk;
+    font-size: 14px;
+    height: 50px;
+    width: 150px;
+
+}
+
+#dueDateID {
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 10px 10px 5px 10px;
+    width: 130px;
+}
